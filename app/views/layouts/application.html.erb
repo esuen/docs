@@ -69,6 +69,9 @@
           <%= render 'layouts/sidebar' %>
           <div class="Docs__article">
             <div class="column1">
+              <% if beta? %>
+                <h1>BETA</h1>
+              <% end %>
               <%= yield %>
               <div class="Docs__note--footer-typo">
                 <p>Spotted a typo? Something missing? Please <a href="https://github.com/buildkite/docs/issues">open an issue</a> or <a href="<%= open_source_url %>">contribute an update</a>.</p>
